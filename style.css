@@ -1,4 +1,10 @@
 /* ----------------------     Задание 1     ----------------------------------*/
+/* ----------------------     Решение №1 - с помощью Flex     ----------------------------------*/
+.block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .block {
   font-size: 32px;
   background: var(--rainbow-gradient);
@@ -7,6 +13,15 @@
   padding: 16px;
   margin-top: 16px;
 }
+
+.block-wrapper .block:nth-child(1) {
+  order: 2; 
+}
+
+.block-wrapper .block:nth-child(2) {
+  order: 1;
+}
+/* ----------------------     /Решение №1 - с помощью Flex     ----------------------------------*/
 /* ----------------------     Задание 2     ----------------------------------*/
 .note {
   background-color: var(--yellow);
