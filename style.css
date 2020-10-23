@@ -94,23 +94,22 @@
   border-radius: 10px;
   background-color: var(--yellow);
   text-align: center;
-/* ----------------------     /Решение №1 - Flex  ----------------------------------*/
+/* ----------------------     /Решение №1 - Grid  ----------------------------------*/
   min-width: 80px;
   display: inline-block;
-  width: calc(11% - 16px);
 
 }
 
-body section:nth-child(3) {
+section:nth-child(3) {
   overflow: hidden;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
+  height:70px;
+
 }
 
 
-/* ----------------------     /Решение     ----------------------------------*/
+/* ----------------------     /Решение №1 - Grid     ----------------------------------*/
 
 /* ----------------------     Конец     ----------------------------------*/
 
