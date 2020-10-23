@@ -4,17 +4,74 @@
   <meta charset="UTF-8">
   <title>Main Page</title>
   <link rel="stylesheet" href="./style.css">
+<style type="text/css">
+	body {
+  margin: 0;
+}
 
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100vh;
+}
+
+#leftblock, #rightblock {
+  width: 50%;
+  transition: 0.3s ease;
+}
+#leftblock.expanded, #rightblock.expanded {
+  width: 100%;
+}
+#leftblock.shrink, #rightblock.shrink {
+  width: 0;
+}
+
+.hover-image-8 a {
+  display: inline-block;
+  background: #0083ff;
+  line-height: 0;
+}
+.hover-image-8 a img {
+  transition: filter 0.5s linear;
+  filter: brightness(2) grayscale(1) opacity(0.5);
+}
+.hover-image-8 a:hover img {
+  filter: none;
+}
+
+#leftblock {
+  	background: url("https://www.vladtime.ru/uploads/posts/2018-06/1528892699_tv-series-rick-and-morty-5062.jpg") no-repeat center center;
+    background-size: cover;
+    border-right: 4px solid #1A1A1A;
+
+}
+
+#rightblock {
+    background: url("https://ogisiferanimation.files.wordpress.com/2018/06/465344_3701467448218_402036535_o.jpg") no-repeat center center;
+    background-size: cover;
+    border-left: 4px solid #1A1A1A;
+
+}
+</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">
-  <a id="a" onclick="toggleExpand(this, 'b')"></a>
-  <a id="b" onclick="toggleExpand(this, 'a')"></a>
+  <a id="leftblock" onclick="toggleExpand(this, 'rightblock')"></a>
+  <a id="rightblock" onclick="toggleExpand(this, 'leftblock')"></a>
 </div>
 
 <script type="text/javascript">
-	
+	function toggleExpand(elem, toShrink) {
+  if (elem.classList.contains("expanded")) {
+    document.getElementById(toShrink).classList.remove('shrink');
+    elem.classList.remove("expanded");
+  } else
+  {
+    document.getElementById(toShrink).classList.add('shrink');
+    elem.classList.add("expanded");
+  }
+}
 </script>
 
 </body>
