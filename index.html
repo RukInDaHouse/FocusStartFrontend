@@ -2,8 +2,9 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Main Page</title>
+  <title>Выбор задания</title>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://team.cft.ru/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <style type="text/css">
 	body {
   margin: 0;
@@ -19,24 +20,13 @@
   width: 50%;
   transition: 0.3s ease;
 }
+
 #leftblock.expanded, #rightblock.expanded {
   width: 100%;
 }
+
 #leftblock.shrink, #rightblock.shrink {
   width: 0;
-}
-
-.hover-image-8 a {
-  display: inline-block;
-  background: #0083ff;
-  line-height: 0;
-}
-.hover-image-8 a img {
-  transition: filter 0.5s linear;
-  filter: brightness(2) grayscale(1) opacity(0.5);
-}
-.hover-image-8 a:hover img {
-  filter: none;
 }
 
 #leftblock {
@@ -57,8 +47,8 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">
-  <a id="leftblock" onclick="toggleExpand(this, 'rightblock')"></a>
-  <a id="rightblock" onclick="toggleExpand(this, 'leftblock')"></a>
+  <a href="./1/index.html" id="leftblock" onclick="toggleExpand(this, 'rightblock'); url=this.href;setTimeout('location.href=url',500);this.href='javascript:void(0)';"></a>
+  <a href="./2/index.html" id="rightblock" onclick="toggleExpand(this, 'leftblock'); url=this.href;setTimeout('location.href=url',500);this.href='javascript:void(0)';"></a>
 </div>
 
 <script type="text/javascript">
