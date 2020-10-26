@@ -8,7 +8,7 @@ input.addEventListener('input', e => {
 
   for (const a of paragraphs) {
     if (a.innerText.match(regex) == null) {
-      a.style.display = 'none';
+      a.style.display = '';
     } else {
       a.style.display = 'block';
       a.innerHTML = a.innerText.replace(regex, replacement)
@@ -18,7 +18,6 @@ input.addEventListener('input', e => {
   let text = document.body.textContent
   let separator = searchTerm
   let number = WordCount(text, separator)
-  //console.log("found ",number," times")
   document.getElementById('result').textContent = number
 })
 
