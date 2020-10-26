@@ -1,7 +1,10 @@
+
 .search__container {
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
+  position: absolute;
+  z-index: 3333333;
 }
 
 .search__input {
@@ -21,4 +24,6 @@
 .highlighted {
   text-shadow: red;
   color: red;
+  background: yellow;
+  font-weight: bold;
 }
