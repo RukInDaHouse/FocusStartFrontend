@@ -10,7 +10,6 @@ input.addEventListener('input', e => {
     if (a.innerText.match(regex) == null) {
       a.style.display = '';
     } else {
-      a.style.display = 'block';
       a.innerHTML = a.innerText.replace(regex, replacement)
     }
   }

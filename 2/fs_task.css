@@ -5,6 +5,14 @@
   margin: 0 auto;
   position: absolute;
   z-index: 3333333;
+  background: #1a1a1a;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+}
+
+.links_count {
+  margin-top: 1%;
 }
 
 .search__input {
