@@ -1,1 +1,38 @@
-.fs-task {}
+header {
+  text-align: center;
+}
+
+main {
+  max-width: 567px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 99999;
+}
+
+.search__container {
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.search__input {
+  border: 2px solid var(--dark-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.search__input:hover,
+.search__input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  -webkit-box-shadow: 0 0 5px 0.1px var(--primary-color);
+          box-shadow: 0 0 5px 0.1px var(--primary-color);
+}
+
+.highlighted {
+  text-shadow: 0 0 6px var(--primary-color);
+  color: var(--primary-color);
+}
+body {
+	background: red!important;
+}
