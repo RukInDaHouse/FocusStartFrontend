@@ -94,26 +94,110 @@
   border-radius: 10px;
   background-color: var(--yellow);
   text-align: center;
-/* ----------------------     /Решение №1 - Grid  ----------------------------------*/
+  }
+/* ----------------------     /Решение №1 - Media Queries + Grid ----------------------------------*/
+
+
+/* ----------------------     /Решение №1 - Media Queries     ----------------------------------*/
+.item {
+ display: inline-block;
+ min-width: 80px;
+
+}
+
+section:nth-child(3) {
+  text-align: center;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 700px) {
+section:nth-child(3) {
+  overflow: hidden;
+  display: inline-block;
+  height:110px;
+}
+
+.item {
+ display: inline-block;
+ width: 10%;
+
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px){
+section:nth-child(3) {
+  overflow: hidden;
+  display: inline-block;
+  height:110px;
+}
+
+.item {
+ display: inline-block;
+ width: 15%;
+
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1920px){
+section:nth-child(3) {
+  overflow: hidden;
+  display: inline-block;
+  height:110px;
+}
+
+.item {
+ display: inline-block;
+ width: 10%;
+
+  }
+}
+
+@media screen and (min-width: 1921px) {
+section:nth-child(3) {
+  overflow: hidden;
+  display: inline-block;
+  height:110px;
+}
+
+.item {
+ display: inline-block;
+ width: 10%;
+
+  }
+}
+/* ----------------------      Решение №2 - Media Queries + Grid
+.item {
   min-width: 80px;
   display: inline-block;
+  width: 8rem;
 
 }
 
 section:nth-child(3) {
   overflow: hidden;
   display: grid;
-  grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(80px,10rem));
   height:70px;
 
 }
 
+@media screen and (max-width: 900px) {
+section:nth-child(3) {
+  overflow: hidden;
+  display: inline-block;
+  height:110px;
+  text-align: center;
+  }
+}
 
-/* ----------------------     /Решение №1 - Grid     ----------------------------------*/
+@media screen and (max-width: 900px) {
+.item {
+ display: inline-block;
+ width: 10%;
 
-/* ----------------------      Решение №2 - Grid  ----------------------------------*/
-/* ----------------------     /Решение №2 - Grid  ----------------------------------*/
-
+  }
+}
+                              /Решение №2 - Media Queries + Grid  ----------------------------------*/
 
 
 /* ----------------------     Конец     ----------------------------------*/
