@@ -17,7 +17,6 @@ input.addEventListener('input', e => {
   let text = document.body.textContent
   let separator = searchTerm
   let number = WordCount(text, separator)
-  //console.log("found ",number," times")
   document.getElementById('result').textContent = number
 })
 
